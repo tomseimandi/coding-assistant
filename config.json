@@ -1,0 +1,26 @@
+{
+    "models": [
+      {
+        "title": "Deepseek Coder 6",
+        "provider": "llama.cpp",
+        "model": "deepseek-7b",
+        "apiBase": "http://localhost:8080"
+      }
+    ],
+    "tabAutocompleteModel": {
+        "title": "Deepseek Coder 6.7B",
+        "provider": "llama.cpp",
+        "model": "deepseek-7b",
+        "apiKey": "http://localhost:8080"
+    },
+    "embeddingsProvider": {
+        "provider": "transformers.js"
+    },
+    "allowAnonymousTelemetry": false
+    // "embeddingsProvider": {
+    //     "title": "Nomic Embed",
+    //     "provider": "llama.cpp",
+    //     "model": "nomic-embed-text",
+    //     "apiKey": "http://localhost:8081/v1/chat/embedding"
+    // }
+}
