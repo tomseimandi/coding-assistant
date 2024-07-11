@@ -1,26 +1,33 @@
 {
-    "models": [
-      {
-        "title": "Deepseek Coder 6",
-        "provider": "llama.cpp",
-        "model": "deepseek-7b",
-        "apiBase": "http://localhost:8080"
-      }
-    ],
-    "tabAutocompleteModel": {
-        "title": "Deepseek Coder 6.7B",
-        "provider": "llama.cpp",
-        "model": "deepseek-7b",
-        "apiKey": "http://localhost:8080"
-    },
-    "embeddingsProvider": {
-        "provider": "transformers.js"
-    },
-    "allowAnonymousTelemetry": false
-    // "embeddingsProvider": {
-    //     "title": "Nomic Embed",
-    //     "provider": "llama.cpp",
-    //     "model": "nomic-embed-text",
-    //     "apiKey": "http://localhost:8081/v1/chat/embedding"
-    // }
+  "models": [
+    {
+      "title": "Codestral 22B Q4KM",
+      "provider": "llama.cpp",
+      "model": "Codestral-22B",
+      "contextLength": 16384,
+      "completionOptions": {
+        "stream": true,
+        "maxTokens": 600
+      },
+      "template": "llama2",
+      "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/8888",
+      "apiKey": "6ac6e059514847bb8bae5adeaebb2be5"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "StarCoder2 3B Q4KM",
+    "provider": "llama.cpp",
+    "model": "starcoder-3b",
+    "apiBase": "http://localhost:8080"
+  },
+  "embeddingsProvider": {
+      "provider": "transformers.js"
+  },
+  "allowAnonymousTelemetry": false
+  // "embeddingsProvider": {
+  //     "title": "Nomic Embed",
+  //     "provider": "llama.cpp",
+  //     "model": "nomic-embed-text",
+  //     "apiKey": "http://localhost:8081/v1/chat/embedding"
+  // }
 }
