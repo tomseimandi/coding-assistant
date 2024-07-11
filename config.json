@@ -25,10 +25,14 @@
     }
   ],
   "tabAutocompleteModel": {
-    "title": "StarCoder2 3B Q4KM",
+    "title": "Deepseek Coder 6.7B Q4KM",
     "provider": "llama.cpp",
-    "model": "starcoder-3b",
-    "apiBase": "http://localhost:8080"
+    "model": "deepseek-7b",
+    "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/8080",
+    "apiKey": "<your_key>"
+  },
+  "tabAutocompleteOptions": {
+    "multilineCompletions": "auto"
   },
   "embeddingsProvider": {
       "provider": "huggingface-tei",
