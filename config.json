@@ -31,7 +31,8 @@
     "apiBase": "http://localhost:8080"
   },
   "embeddingsProvider": {
-      "provider": "transformers.js"
+      "provider": "huggingface-tei",
+      "apiBase": "http://localhost:8888"
   },
   "allowAnonymousTelemetry": false,
   "disableSessionTitles": true, 

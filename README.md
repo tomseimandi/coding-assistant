@@ -63,6 +63,16 @@ When it does, to run an embedding server using the Nomic Embed model
 The `.gguf` file here is saved in the `model` subfolder of the `llama.cpp` repository. This server
 is queriable at the URL [http://localhost:8081/v1/chat/embedding](http://localhost:8081/v1/chat/embedding).
 
+**Other options for embedding**
+
+One possibility is to use [HuggingFace's text embeddings inference](https://huggingface.co/docs/text-embeddings-inference/en/quick_tour):
+
+- Local installation for CPU only: https://huggingface.co/docs/text-embeddings-inference/local_cpu:
+    - Install Rust
+    - `git clone https://github.com/huggingface/text-embeddings-inference`
+    - `cargo install --path router` in the cloned repository
+- To deploy Text Embeddings Inference in an air-gapped environment, clone the Huggingface repository (`git lfs` is required) and then `text-embeddings-router --model-id path/to/model --port 8888` for example
+
 ## Run an inference server on a remote Jupyter Lab
 
 - When running a `llama.cpp` inference server on a remote JupyterHub instance, it will be reachable from outside 
