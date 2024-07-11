@@ -6,12 +6,22 @@
       "model": "Codestral-22B",
       "contextLength": 16384,
       "completionOptions": {
-        "stream": true,
-        "maxTokens": 600
+        // "maxTokens": 600
       },
       "template": "llama2",
       "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/8888",
-      "apiKey": "6ac6e059514847bb8bae5adeaebb2be5"
+      "apiKey": "<your_key>"
+    },
+    {
+      "title": "Codestral 22B Q4KM - Edit",
+      "provider": "llama.cpp",
+      "model": "Codestral-22B",
+      "contextLength": 16384,
+      "completionOptions": {
+        // "maxTokens": 600
+      },
+      "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/8888",
+      "apiKey": "<your_key>"
     }
   ],
   "tabAutocompleteModel": {
@@ -23,11 +33,11 @@
   "embeddingsProvider": {
       "provider": "transformers.js"
   },
-  "allowAnonymousTelemetry": false
-  // "embeddingsProvider": {
-  //     "title": "Nomic Embed",
-  //     "provider": "llama.cpp",
-  //     "model": "nomic-embed-text",
-  //     "apiKey": "http://localhost:8081/v1/chat/embedding"
-  // }
+  "allowAnonymousTelemetry": false,
+  "disableSessionTitles": true, 
+  "experimental": {
+    "modelRoles": {
+      "inlineEdit": "Codestral 22B Q4KM - Edit"
+    }
+  }
 }
