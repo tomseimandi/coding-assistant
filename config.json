@@ -31,8 +31,9 @@
     "multilineCompletions": "auto"
   },
   "embeddingsProvider": {
-      "provider": "huggingface-tei",
-      "apiBase": "http://localhost:8888"
+    "provider": "huggingface-tei",
+    "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/9090",
+    "apiKey": "<your_key>"
   },
   "allowAnonymousTelemetry": false,
   "disableSessionTitles": true, 
