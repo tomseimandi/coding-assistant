@@ -5,9 +5,7 @@
       "provider": "llama.cpp",
       "model": "Codestral-22B",
       "contextLength": 16384,
-      "completionOptions": {
-        // "maxTokens": 600
-      },
+      "completionOptions": {},
       "template": "llama2",
       "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/8888",
       "apiKey": "<your_key>"
@@ -17,9 +15,7 @@
       "provider": "llama.cpp",
       "model": "Codestral-22B",
       "contextLength": 16384,
-      "completionOptions": {
-        // "maxTokens": 600
-      },
+      "completionOptions": {},
       "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/8888",
       "apiKey": "<your_key>"
     }
