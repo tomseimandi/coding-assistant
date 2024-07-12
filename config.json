@@ -33,7 +33,11 @@
   "embeddingsProvider": {
     "provider": "huggingface-tei",
     "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/9090",
-    "apiKey": "<your_key>"
+    "requestOptions": {
+      "headers": {
+        "Authorization": "Bearer <your_key>"
+      }
+    }
   },
   "allowAnonymousTelemetry": false,
   "disableSessionTitles": true, 
