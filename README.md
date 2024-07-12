@@ -2,6 +2,12 @@
 
 We will use the open-source [Continue](https://docs.continue.dev/intro) code assistant along with `llama.cpp` inference servers.
 
+## Launch inference servers
+
+The `manage_servers.sh` script allows to start and stop both the Codestral and Deepseek Coder inference servers used for the code assistant. To start the servers, run the command `./manage_servers.sh start` and to stop them, run the command `./manage_servers.sh stop`.
+
+Possibility to have a cronjob to make sure the servers are stopped at night ?
+
 ## `llama.cpp`
 
 ### Installation
@@ -73,7 +79,7 @@ One possibility is to use [HuggingFace's text embeddings inference](https://hugg
     - `cargo install --path router` in the cloned repository
 - To deploy Text Embeddings Inference in an air-gapped environment, clone the Huggingface repository (`git lfs` is required) and then `text-embeddings-router --model-id path/to/model --port 8888` for example
 
-## Run an inference server on a remote Jupyter Lab
+### Run an inference server on a remote Jupyter Lab
 
 - When running a `llama.cpp` inference server on a remote JupyterHub instance, it will be reachable from outside 
 using an JupyterHub API token. Go to https://lab.peren.fr/hub/token or https://bacasable.peren.fr/hub/token to get an API token
