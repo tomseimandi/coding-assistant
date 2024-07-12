@@ -63,10 +63,12 @@ case "$1" in
   start)
     start_server "../llama.cpp/llama-server -m ../llama.cpp/models/Codestral-22B-v0.1-Q4_K_M.gguf -ngl 57 --port 8888" "/tmp/inference_servers/codestral.pid" "Codestral server" "/tmp/inference_servers/codestral.log"
     start_server "../llama.cpp/llama-server -m ../llama.cpp/models/deepseek-coder-6.7b-base.Q4_K_M.gguf -ngl 33 --port 8080" "/tmp/inference_servers/deepseek.pid" "Deepseek Coder server" "/tmp/inference_servers/deepseek.log"
+    start_server "../text-embeddings-inference/text-embeddings-router --model-id ../../rcouronne/nomic-embed-text-v1/ --port 9090" "/tmp/inference_servers/embedding.pid" "Nomic Embedding server" "/tmp/inference_servers/embedding.log"
     ;;
   stop)
     stop_server "/tmp/inference_servers/codestral.pid" "Codestral server"
     stop_server "/tmp/inference_servers/deepseek.pid" "Deepseek Coder server"
+    stop_server "/tmp/inference_servers/embedding.pid" "Nomic Embedding server"
     ;;
   *)
     echo "Usage: $0 {start|stop}"
