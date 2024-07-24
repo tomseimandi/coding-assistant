@@ -1,0 +1,9 @@
+project:
+  output-dir: ../docs
+  render:
+    - index.qmd
+
+format:
+  revealjs:
+    theme: default
+    output-file: index.html

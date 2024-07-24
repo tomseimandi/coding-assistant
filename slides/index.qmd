@@ -1,0 +1,106 @@
+---
+title: Assistant de code open-source
+author: ""
+date: "07/24/2024"
+date-format: "DD/MM/YYYY"
+slide-number: true
+lang: fr-FR
+# for blind readers:
+slide-tone: false
+chalkboard: # press the B key to toggle chalkboard
+  theme: whiteboard
+# uncomment to use the multiplex mode:
+# multiplex: true
+controls: true
+css: custom.css
+from: markdown+emoji
+ascii: true
+execute: 
+  echo: false
+  warning: false
+---
+
+## En arrivant
+
+![](img/scraping_api.png){fig-align="center"}
+
+## Mon réflexe
+
+![](img/chatgpt.png){fig-align="center"}
+
+## Assistants open-source
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](img/tabby.png)
+:::
+
+::: {.column width="60%"}
+![](img/continue.png)
+:::
+
+::::
+
+## Fonctionnalités de Continue {.smaller}
+
+- Chat
+- Recherche dans la base de code et au-delà grâce à des context providers (`@diff`, `@folder`, `@docs`, `@codebase`) pour:
+  - Poser des questions haut-niveau sur la base de code
+  - Générer du code en s'appuyant sur du code existant
+  - ...
+- Autocomplétion (beta)
+- **Custom prompts** (expérimental)
+- **Quick Actions** (expérimental)
+
+## 3 modèles utilisés
+
+- Modèle de chat (30B+): Codestral 22B
+- Modèle pour l'autocomplétion (1-15B): Deepseek Coder 6.7B
+- Modèle d'embeddings: `nomic-embed-text`
+
+## Inférence pour les modèles génératifs
+
+- Inférence avec `llama.cpp`:
+  - Rapide
+  - Pas de dépendances
+  - `llama.cpp` web server: serveur HTTP compatible avec l'API OpenAI pour servir des modèles locaux
+
+## Configuration
+
+```json
+{
+  "models": [
+    {
+      "title": "Codestral 22B Q4KM",
+      "provider": "llama.cpp",
+      "model": "Codestral-22B",
+      "contextLength": 16384,
+      "completionOptions": {},
+      "template": "llama2",
+      "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/8888",
+      "apiKey": "<your_key>"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Deepseek Coder 6.7B Q4KM",
+    "provider": "llama.cpp",
+    "model": "deepseek-7b",
+    "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/8080",
+    "apiKey": "<your_key>"
+  },
+  "tabAutocompleteOptions": {
+    "multilineCompletions": "auto"
+  },
+  "embeddingsProvider": {
+    "provider": "huggingface-tei",
+    "apiBase": "https://bacasable.peren.fr/user/tseimandi/proxy/9090",
+    "requestOptions": {
+      "headers": {
+        "Authorization": "Bearer <your_key>"
+      }
+    }
+  },
+  "allowAnonymousTelemetry": false,
+}
+```
